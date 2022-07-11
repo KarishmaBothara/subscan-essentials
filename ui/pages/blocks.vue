@@ -23,7 +23,8 @@ export default {
   async mounted() {
     if (process.client) {
       let module = await import(`~/plugins/external${this.$route.path}.json`)
-      this.demo = module;
+      this.demo = module.default;
+      console.log('module:', module);
       this.initAmis();
     }
   },

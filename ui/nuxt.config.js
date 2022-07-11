@@ -53,7 +53,7 @@ export default {
 
   axios: {
     proxy: process.env.NODE_ENV !== 'production',
-    browserBaseURL: process.env.NODE_ENV !== 'production' ? "" : "http://127.0.0.1:4399"
+    browserBaseURL: process.env.NODE_ENV !== 'production' ? "http://127.0.0.1:4399" : "http://127.0.0.1:4399"
   },
 
   proxy: {

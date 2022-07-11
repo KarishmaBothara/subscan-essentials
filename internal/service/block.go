@@ -26,6 +26,7 @@ func (s *Service) CreateChainBlock(conn websocket.WsConn, hash string, block *rp
 	blockNum := util.StringToInt(util.HexToNumStr(block.Header.Number))
 
 	metadataInstant := s.getMetadataInstant(spec, hash)
+	fmt.Println("block extrinscis ", block.Extrinsics)
 
 	// Extrinsic
 	decodeExtrinsics, err = substrate.DecodeExtrinsic(block.Extrinsics, metadataInstant, spec)

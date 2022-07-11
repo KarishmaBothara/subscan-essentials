@@ -25,6 +25,7 @@ export default {
       let name = this.$route.params && this.$route.params.pathMatch;
       let result = await this.$axios.$post("/api/scan/plugins/ui", {name: name});
       if (result.data) {
+        console.log('result.data::',result.data);
         this.demo = result.data;
         this.initAmis();
       }

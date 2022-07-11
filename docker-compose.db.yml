@@ -11,8 +11,8 @@ services:
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
     ports:
       - '3306:3306'
-    volumes:
-      - ./data/mysql:/var/lib/mysql
+#    volumes:
+#      - ./data/mysql:/var/lib/mysql
     networks:
       - app_net
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
